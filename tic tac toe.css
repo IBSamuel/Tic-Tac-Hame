@@ -1,0 +1,127 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: rockwell;
+}
+body{
+    background-color: rgb(5, 2, 12);
+}
+.large{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./9989323_4309397.jpg);
+    background-size: cover;
+    background-position: center;
+}
+table{
+    height: 300px;
+    width: 300px;
+    border: none;
+}
+td,tr{
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    font-size: 35px;
+    border: 3px solid white;
+    border-radius: 10%;
+    color: white;
+} 
+td{
+    font-family: Bradley Hand ITC;
+    box-shadow: 
+    0 0 5px rgba(0, 123, 255, .7),
+   0 0 20px rgba(0, 123, 255, .7),
+   0 0 60px rgba(0, 123, 255, .7);
+    text-shadow: 
+     0 0 5px rgba(0, 123, 255, .7),
+    0 0 20px rgba(0, 123, 255, .7),
+    0 0 60px rgba(0, 123, 255, .7);
+}
+.small{
+    text-align: center;
+}
+.small input{
+    width: 300px;
+    height: 50px;
+    margin: 10px;
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+    border: 2px solid white;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 
+    0 0 5px rgba(0, 123, 255, .7),
+   0 0 20px rgba(0, 123, 255, .7),
+   0 0 60px rgba(0, 123, 255, .7);
+    text-shadow: 
+     0 0 5px rgba(0, 123, 255, .7),
+    0 0 20px rgba(0, 123, 255, .7),
+    0 0 60px rgba(0, 123, 255, .7);
+}
+.add{
+    height: 50px;
+    width: 150px;
+    border-radius: 20px;
+    font-size: 20px;
+    outline: none;
+    border: 2px solid white;
+    background-color: transparent;
+    color: aliceblue;
+    box-shadow: 
+    0 0 5px rgba(0, 123, 255, .7),
+    0 0 20px rgba(0, 123, 255, .7),
+    0 0 60px rgba(0, 123, 255, .7);
+}
+h1{
+    color: aliceblue;
+    font-family: cursive;
+    margin: 20px;
+}
+#cont{
+    margin-top: 10px;
+    height: 50px;
+    width: 150px;
+    border-radius: 20px;
+    font-size: 20px;
+    outline: none;
+    border: none; 
+    background-color: transparent;
+    color: aliceblue;
+    box-shadow: 
+    0 0 5px rgba(0, 123, 255, .7),
+    0 0 20px rgba(0, 123, 255, .7),
+    0 0 60px rgba(0, 123, 255, .7);   
+    text-shadow: 
+    0 0 5px rgba(0, 123, 255, .7),
+    0 0 20px rgba(0, 123, 255, .7),
+    0 0 60px rgba(0, 123, 255, .7);
+}
+#username,#colaboratorname{
+    font-size: 25px;
+    color: aliceblue;
+}
+#showingp,#showingp1{
+    font-size: 25px;
+    color: aliceblue;
+    text-shadow: 
+    0 0 5px rgba(0, 123, 255, .7),
+    0 0 20px rgba(0, 123, 255, .7),
+    0 0 60px rgba(0, 123, 255, .7);
+}
+.btn{
+    height: 30px;
+    width: 150px;
+    color: aliceblue;
+    background-color: transparent;
+    border: 2px solid white;
+    box-shadow:    0 0 5px rgba(0, 123, 255, .7),
+    0 0 20px rgba(0, 123, 255, .7),
+    0 0 60px rgba(0, 123, 255, .7);;
+    font-size:20px ;
+    margin-bottom: 10px;
+}

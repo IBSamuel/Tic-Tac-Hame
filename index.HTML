@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.O">
+    <title>Document</title>
+    <link rel="stylesheet" href="tic tac toe.css">
+</head>
+<body>
+    <div class="large">
+        <div class="small">
+            <div id="inn">
+                <h1>TIC TAC TOE</h1>
+                <input type="text" value="Tic" id="firstplayer"><br>
+                <input type="text" value="Tac" id="secondplayer"><br>
+                <button onclick="naming()" class="add">Add Players</button>
+            </div>
+            <div id="tab">
+            </div>
+            <div id="innnn">
+                <div id="username"></div>
+                <div id="showingp"></div>
+                <div id="colaboratorname"></div>
+                <div id="showingp1"></div>
+                <button onclick="reset()" id="cont">Continue</button>
+            </div>
+        </div>
+    </div>
+    <script>
+
+            let myBackground= new Audio("backGroun beat.m4a")
+        function playing(){
+         myBackground.play()
+        }
+        function paused(){
+         myBackground.pause()
+        }
+        showingp.innerHTML=""
+        showingp1.innerHTML=""
+        cont.innerHTML=""
+        const naming=()=>{
+            colaboratorname.innerHTML=secondplayer.value
+            username.innerHTML=firstplayer.value
+            cont.innerHTML="Continue"
+            tab.innerHTML =`        <button onclick="playing()" id="pla" class="btn">Play Beat's</button>
+    <button onclick="paused()" id="paus" class="btn">Pause Beat</button> </div>
+                     <table>
+                <tr>
+                    <td onclick="test(event)" id="first"></td>
+                    <td onclick="test(event)" id="first2"></td>
+            <td onclick="test(event)" id="first3"></td>
+            </tr> <tr>
+                <td onclick="test(event)" id="second"></td>
+            <td onclick="test(event)" id="second2"></td>
+            <td onclick="test(event)" id="second3"></td>
+            </tr>
+            <tr class="all">
+                <td onclick="test(event)" id="third"></td>
+                <td onclick="test(event)" id="third2"></td>
+                <td onclick="test(event)" id="third3"></td>
+                </tr>
+                </table>`
+                inn.innerHTML="" 
+            }
+            
+            let ticvalue="X"
+            const test=(e)=>{
+                let mySong= new Audio("A28DRU7-applause.mp3")
+                if(e.target.innerText==""){
+                    if(ticvalue=="X" ){
+                        e.target.innerText="X"
+                        ticvalue="O"
+                    }
+                    else if(ticvalue=="O"){
+                        e.target.innerText="O"
+                        ticvalue="X"
+                    }
+                    if(first.innerText =="X" && first2.innerText =="X" && first3.innerText =="X" ||first.innerText =="O" && first2.innerText =="O" && first3.innerText =="O"){
+                        if(first.innerText =="X" && first2.innerText =="X" && first3.innerText =="X" ){  
+                            let goingcore =Number(showingp.innerHTML)+5
+                            showingp.innerHTML= goingcore
+                        }
+                        else{
+                            let goingcore =Number(showingp1.innerHTML)+5
+                            showingp1.innerHTML= goingcore
+                        }
+                        first.style.backgroundColor="lightblue"
+                        first2.style.backgroundColor="lightblue"
+                        first3.style.backgroundColor="lightblue"
+                        mySong.play()
+                        setTimeout(()=>{
+                        mySong.pause()
+                        first.style.backgroundColor="transparent"
+                        first2.style.backgroundColor="transparent"
+                        first3.style.backgroundColor="transparent"
+                        first.innerText =""
+                        first2.innerText =""
+                        first3.innerText ="" 
+                        second.innerText ="" 
+                        second2.innerText ="" 
+                        second3.innerText ="" 
+                        third.innerText=""
+                        third2.innerText=""
+                        third3.innerText=""
+                        },1500)
+           }
+           else if(second.innerText =="X" && second2.innerText =="X" && second3.innerText =="X" ||second.innerText =="O" && second2.innerText =="O" && second3.innerText =="O"){
+            if(second.innerText =="X" && second2.innerText =="X" && second3.innerText =="X" ){  
+            let goingcore =Number(showingp.innerHTML)+5
+               showingp.innerHTML= goingcore
+            }
+            else{
+                let goingcore =Number(showingp1.innerHTML)+5
+               showingp1.innerHTML= goingcore}
+                        second.style.backgroundColor="lightblue"
+                        second2.style.backgroundColor="lightblue"
+                        second3.style.backgroundColor="lightblue"
+                        mySong.play()
+                        setTimeout(()=>{
+                            mySong.pause()
+                        second.style.backgroundColor="transparent"
+                        second2.style.backgroundColor="transparent"
+                        second3.style.backgroundColor="transparent"
+                        first.innerText =""
+                        first2.innerText =""
+                        first3.innerText ="" 
+                        second.innerText ="" 
+                        second2.innerText ="" 
+                        second3.innerText ="" 
+                        third.innerText=""
+                        third2.innerText=""
+                        third3.innerText=""
+                        },1500)
+           }
+           else if(third.innerText =="X" && third2.innerText =="X" && third3.innerText =="X" ||third.innerText =="O" && third2.innerText =="O" && third3.innerText =="O"){
+            if(third.innerText =="X" && third2.innerText =="X" && third3.innerText =="X" ){  
+            let goingcore =Number(showingp.innerHTML)+5
+               showingp.innerHTML= goingcore
+            }
+            else{
+                let goingcore =Number(showingp1.innerHTML)+5
+               showingp1.innerHTML= goingcore
+            }
+                        third.style.backgroundColor="lightblue"
+                        third2.style.backgroundColor="lightblue"
+                        third3.style.backgroundColor="lightblue"
+                        mySong.play()
+                        setTimeout(()=>{
+                            mySong.pause()
+                        third.style.backgroundColor="transparent"
+                        third2.style.backgroundColor="transparent"
+                        third3.style.backgroundColor="transparent"
+                        first.innerText =""
+                        first2.innerText =""
+                        first3.innerText ="" 
+                        second.innerText ="" 
+                        second2.innerText ="" 
+                        second3.innerText ="" 
+                        third.innerText=""
+                        third2.innerText=""
+                        third3.innerText=""
+                        },1500)
+           }
+           else if(first.innerText =="X" && second.innerText =="X" && third.innerText =="X" ||first.innerText =="O" && second.innerText =="O" && third.innerText =="O"){
+            if(first.innerText =="X" && second.innerText =="X" && third.innerText =="X" ){  
+            let goingcore =Number(showingp.innerHTML)+5
+               showingp.innerHTML= goingcore
+            }
+            else{
+                let goingcore =Number(showingp1.innerHTML)+5
+               showingp1.innerHTML= goingcore}
+                        mySong.play()
+                        first.style.backgroundColor="lightblue"
+                        second.style.backgroundColor="lightblue"
+                        third.style.backgroundColor="lightblue"
+                        setTimeout(()=>{
+                        mySong.pause()
+                        first.style.backgroundColor="transparent"
+                        second.style.backgroundColor="transparent"
+                        third.style.backgroundColor="transparent"
+                        first.innerText =""
+                        first2.innerText =""
+                        first3.innerText ="" 
+                        second.innerText ="" 
+                        second2.innerText ="" 
+                        second3.innerText ="" 
+                        third.innerText=""
+                        third2.innerText=""
+                        third3.innerText=""
+                        },1500)
+           }
+           else if(first2.innerText =="X" && second2.innerText =="X" && third2.innerText =="X" ||first2.innerText =="O" && second2.innerText =="O" && third2.innerText =="O"){
+            if(first2.innerText =="X" && second2.innerText =="X" && third3.innerText =="X" ){  
+            let goingcore =Number(showingp.innerHTML)+5
+               showingp.innerHTML= goingcore
+            }
+            else{
+                let goingcore =Number(showingp1.innerHTML)+5
+               showingp1.innerHTML= goingcore}
+                        mySong.play()
+                        first2.style.backgroundColor="lightblue"
+                        second2.style.backgroundColor="lightblue"
+                        third2.style.backgroundColor="lightblue"
+                        setTimeout(()=>{
+                            mySong.pause()
+                        first2.style.backgroundColor="transparent"
+                        second2.style.backgroundColor="transparent"
+                        third2.style.backgroundColor="transparent"
+                        first.innerText =""
+                        first2.innerText =""
+                        first3.innerText ="" 
+                        second.innerText ="" 
+                        second2.innerText ="" 
+                        second3.innerText ="" 
+                        third.innerText=""
+                        third2.innerText=""
+                        third3.innerText=""
+                        },1500)
+           } else if(first3.innerText =="X" && second3.innerText =="X" && third3.innerText =="X" ||first3.innerText =="O" && second3.innerText =="O" && third3.innerText =="O"){
+            if(first3.innerText =="X" && second3.innerText =="X" && third3.innerText =="X" ){  
+            let goingcore =Number(showingp.innerHTML)+5
+               showingp.innerHTML= goingcore
+            }
+            else{
+                let goingcore =Number(showingp1.innerHTML)+5
+               showingp1.innerHTML= goingcore}
+                        mySong.play()
+                        first3.style.backgroundColor="lightblue"
+                        second3.style.backgroundColor="lightblue"
+                        third3.style.backgroundColor="lightblue"
+                        setTimeout(()=>{
+                            mySong.pause()
+                        first3.style.backgroundColor="transparent"
+                        second3.style.backgroundColor="transparent"
+                        third3.style.backgroundColor="transparent"
+                        first.innerText =""
+                        first2.innerText =""
+                        first3.innerText ="" 
+                        second.innerText ="" 
+                        second2.innerText ="" 
+                        second3.innerText ="" 
+                        third.innerText=""
+                        third2.innerText=""
+                        third3.innerText=""
+                        },1500)
+           }
+           else if(first.innerText =="X" && second2.innerText =="X" && third3.innerText =="X" ||first.innerText =="O" && second2.innerText =="O" && third3.innerText =="O"){
+               if(first.innerText =="X" && second2.innerText =="X" && third3.innerText =="X" ){  
+            let goingcore =Number(showingp.innerHTML)+5
+               showingp.innerHTML= goingcore
+            }
+            else{
+                let goingcore =Number(showingp1.innerHTML)+5
+               showingp1.innerHTML= goingcore}
+                        first.style.backgroundColor="lightblue"
+                        second2.style.backgroundColor="lightblue"
+                        third3.style.backgroundColor="lightblue"
+                        mySong.play()
+                        setTimeout(()=>{
+                            mySong.pause()
+                        first.style.backgroundColor="transparent"
+                        second2.style.backgroundColor="transparent"
+                        third3.style.backgroundColor="transparent"
+                        first.innerText =""
+                        first2.innerText =""
+                        first3.innerText ="" 
+                        second.innerText ="" 
+                        second2.innerText ="" 
+                        second3.innerText ="" 
+                        third.innerText=""
+                        third2.innerText=""
+                        third3.innerText=""
+                        },1500)
+           }           
+           else if(first3.innerText =="X" && second2.innerText =="X" && third.innerText =="X" ||first3.innerText =="O" && second2.innerText =="O" && third.innerText =="O"){
+                        first3.style.backgroundColor="lightblue"
+                        second2.style.backgroundColor="lightblue"
+                        third.style.backgroundColor="lightblue"
+                        mySong.play()
+                        setTimeout(()=>{
+                            mySong.pause()
+                        first3.style.backgroundColor="transparent"
+                        second2.style.backgroundColor="transparent"
+                        third.style.backgroundColor="transparent"
+                        first.innerText =""
+                        first2.innerText =""
+                        first3.innerText ="" 
+                        second.innerText ="" 
+                        second2.innerText ="" 
+                        second3.innerText ="" 
+                        third.innerText=""
+                        third2.innerText=""
+                        third3.innerText=""
+                        },1500)
+               if(first.innerText =="X" && second2.innerText =="X" && third.innerText =="X" ){  
+               let goingcore =Number(showingp.innerHTML)+5
+                  showingp.innerHTML= goingcore
+               }
+               else{
+                   let goingcore =Number(showingp1.innerHTML)+5
+                  showingp1.innerHTML= goingcore}
+           }            
+}
+        }
+        const reset=()=>{
+            first.innerText =""
+               first2.innerText =""
+               first3.innerText ="" 
+               second.innerText ="" 
+               second2.innerText ="" 
+               second3.innerText ="" 
+               third.innerText=""
+               third2.innerText=""
+               third3.innerText=""
+        }
+    </script>
+    
+</body>
+</html>
